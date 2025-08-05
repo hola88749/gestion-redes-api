@@ -21,22 +21,22 @@ def eliminar_dispositivo(id_user):
     return res
 
 if __name__ == "__main__":
-    # Crear
+    
     r_post = agregar_dispositivo("Raul", "Ingeniero")
     print("POST status:", r_post.status_code)
     print("POST response:", r_post.json())
 
-    # Listar
+
     r_get = listar_dispositivos()
     print("GET status:", r_get.status_code)
     print("GET response:", r_get.json())
 
-    # Actualizar
-    r_put = actualizar_dispositivo(1, "Raul Cruz", "Desarrollador")
+    
+    r_put = actualizar_dispositivo(1, "Router1 ", "cisco2911")
     print("PUT status:", r_put.status_code)
     print("PUT response:", r_put.json())
 
-    # Eliminar
+    
     r_delete = eliminar_dispositivo(1)
     print("DELETE status:", r_delete.status_code)
-    print("DELETE response:", r_delete.text)  # Normalmente vacío
+    print("DELETE response:", r_delete.text)  
